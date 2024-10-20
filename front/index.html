@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drone Management</title>
+    <title>Drone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,46 +17,50 @@
         </div>
 
         <!-- Page 1: View Config -->
-<div id="config" class="page">
-    <h2>View Drone Config</h2>
-    <input type="number" id="droneId" placeholder="Enter Drone ID">
-    <button onclick="fetchDroneConfig()">View Config</button>
-    <div id="drone-data" class="hidden">
-        <h3>Drone Details</h3>
-        <p><b>Drone ID :</b> <span id="drone-id"></span></p> <!-- แสดง Drone ID -->
-        <p><b>Drone Name :</b> <span id="drone-name"></span></p>
-        <p><b>Light:</b> <span id="drone-light"></span></p>
-        <p><b>Maximum Speed :</b> <span id="drone-speed"></span></p>
-        <p><b>Country :</b> <span id="drone-country"></span></p>
-        <p><b>Population :</b> <span id="drone-population"></span></p>
-    </div>
-</div>
+        <div id="config" class="page">
+            <h1>View Drone Config</h1>
+            <input type="number" id="droneId" placeholder="Enter Drone ID">
+            <button onclick="fetchDroneConfig()">View Config</button>
+            <div id="drone-data" class="hidden">
+                <h3>Drone Details</h3>
+                <p><b>Drone ID :</b> <span id="drone-id"></span></p>
+                <p><b>Drone Name :</b> <span id="drone-name-display"></span></p>
+                <p><b>Light:</b> <span id="drone-light"></span></p>
+                <p><b>Maximum Speed :</b> <span id="drone-speed"></span></p>
+                <p><b>Country :</b> <span id="drone-country"></span></p>
+                <p><b>Population :</b> <span id="drone-population"></span></p>
+            </div>
+        </div>
 
         <!-- Page 2: Temperature Log Form -->
-<div id="log-form" class="page hidden">
-    <h2>Temperature Log Form</h2>
-    <input type="number" id="log-droneId" placeholder="Enter Drone ID">
-    <input type="number" id="temperature" placeholder="Enter Temperature (°C)">
-    <button onclick="submitTemperature()">Submit Data</button>
-</div>
+        <div id="log-form" class="page hidden">
+            <h1>Update Drone Data</h1>
+            <input type="number" id="log-droneId" placeholder="Enter Drone ID">
+            <input type="text" id="log-drone-name" placeholder="Enter Drone Name">
+            <input type="text" id="log-country" placeholder="Enter Country">
+            <input type="number" id="log-temperature" placeholder="Enter Temperature (°C)">
+            <button onclick="updateDroneData()">Submit Data</button>
+        </div>
         
-
-       <!-- Page 3: View Logs -->
-<div id="view-logs" class="page hidden">
-    <h2>View Logs</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Created</th>
-                <th>Country</th>
-                <th>Drone ID</th>
-                <th>Drone Name</th>
-                <th>Celsius</th>
-            </tr>
-        </thead>
-        <tbody id="log-table-body"></tbody> <!-- ใส่ id ให้ตรง -->
-    </table>
-</div>
+        <!-- Page 3: View Logs -->
+        <div id="view-logs" class="page hidden">
+            <h1>View Logs</h1>
+            <h3 id="page-number"></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Created</th>
+                        <th>Country</th>
+                        <th>Drone ID</th>
+                        <th>Drone Name</th>
+                        <th>Celsius</th>
+                    </tr>
+                </thead>
+                <tbody id="logs-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
