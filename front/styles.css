@@ -1,79 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #002028;
+    color: #002028;
+    display: grid; 
+    place-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    background-color: #002028;
+    margin: 0 auto; 
+    padding: 20px; }
+
+.nav {
+    display: flex;
+    justify-content: space-around; /* จัดให้ปุ่มอยู่กลาง */
+    margin-bottom: 20px;
 }
 
-h2 {
-    text-align: center;
+button {
+    background-color: #6e1313;
+    color: #f4b3b3;
+    font-family: "Forum", serif;
+    font-size: medium;
+    margin-top: 1px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #440000;
+}
+
+.page {
+    padding: 20px;
+    background: #f4b3b3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding-bottom: 0px;
+    font-family: "Forum", serif;
+    font-weight: 1200;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse; }
+
+th, td {
+    padding: 10px;
+    border: 1px solid #002028;
+    text-align: left;
+}
+
+th {
+    background-color: #6e1313;
+    color: white;
 }
 
 .hidden {
     display: none;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.nav button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.nav button:hover {
-    background-color: #0056b3;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
+#page-number {
+    margin: 10px 0;
+    font-weight: bold;
 }
