@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());  
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'frontend'))); // For serving static files
+app.use(express.static(path.join(__dirname, 'front'))); // For serving static files
 
 
 const droneconfigserver = 'https://script.google.com/macros/s/AKfycbzwclqJRodyVjzYyY-NTQDb9cWG6Hoc5vGAABVtr5-jPA_ET_2IasrAJK4aeo5XoONiaA/exec'
