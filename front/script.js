@@ -1,5 +1,5 @@
-const API_HOST = "http://localhost:8000";
-//const API_HOST = window.API_HOST || "https://drone-for-webdev.onrender.com";
+//const API_HOST = "http://localhost:8000";
+const API_HOST = window.API_HOST || "https://drone-for-webdev.onrender.com";
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => page.classList.add('hidden'));
     document.getElementById(pageId).classList.remove('hidden');
